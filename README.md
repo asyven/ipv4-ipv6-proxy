@@ -1,17 +1,13 @@
 Redirect connections from different ports at one ipv4 address to unique random ipv6 address from \64 subnetwork. Based on 3proxy
 
-![cover](cover.svg)
-
 ## Requirements
 - Centos 8
 - Ipv6 \64
 
 ## Installation
-VPS from [Vultr *100$ free*](https://www.vultr.com/?ref=8809561) used as Centos setup
-
-1. `bash <(curl -s "https://github.com/asyven/ipv4-ipv6-proxy/blob/master/scripts/deltahost_centos8_prepare.sh")`
+1. `bash <(curl -s "https://raw.githubusercontent.com/asyven/ipv4-ipv6-proxy/master/scripts/deltahost_centos8_prepare.sh")`
 2. `reboot`
-3. `bash <(curl -s "https://github.com/asyven/ipv4-ipv6-proxy/blob/master/scripts/deltahost_centos8.sh")`
+3. `bash <(curl -s "https://raw.githubusercontent.com/asyven/ipv4-ipv6-proxy/master/scripts/deltahost_centos8.sh")`
 4. After installation dowload the file `proxy.zip`
    * File structure: `IP4:PORT:LOGIN:PASS`
    * You can use this online [util](http://buyproxies.org/panel/format.php
