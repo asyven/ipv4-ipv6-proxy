@@ -102,7 +102,7 @@ $(awk -F "/" '{print "ifconfig '$main_interface' inet6 add " $5 "/64"}' ${WORKDA
 EOF
 }
 echo "installing apps"
-yum -y install wget gcc net-tools bsdtar zip make iptables nano curl >/dev/null
+yum -y install gcc net-tools bsdtar zip make >/dev/null
 
 install_3proxy
 
@@ -129,7 +129,7 @@ gen_3proxy >/usr/local/etc/3proxy/3proxy.cfg
 
 cat >>/etc/rc.local <<EOF
 systemctl start NetworkManager.service
-#ifup ${main_interface}
+# ifup ${main_interface}
 bash ${WORKDIR}/boot_iptables.sh
 bash ${WORKDIR}/boot_ifconfig.sh
 ulimit -n 65535
