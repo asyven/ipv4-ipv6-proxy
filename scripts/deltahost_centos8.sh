@@ -102,7 +102,7 @@ $(awk -F "/" '{print "ifconfig '$main_interface' inet6 add " $5 "/64"}' ${WORKDA
 EOF
 }
 echo "installing apps"
-yum -y install wget gcc net-tools bsdtar zip make iptables nano >/dev/null
+yum -y install wget gcc net-tools bsdtar zip make iptables nano curl >/dev/null
 
 install_3proxy
 
@@ -116,8 +116,8 @@ IP6=$(curl -6 -s icanhazip.com | cut -f1-4 -d':')
 
 echo "Internal ip = ${IP4}. Exteranl sub for ip6 = ${IP6}"
 
-FIRST_PORT=20000
-LAST_PORT=21000
+FIRST_PORT=10000
+LAST_PORT=11000
 
 gen_data >$WORKDIR/data.txt
 gen_iptables >$WORKDIR/boot_iptables.sh
