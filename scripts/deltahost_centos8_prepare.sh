@@ -13,7 +13,6 @@ echo IPV6_DEFROUTE="yes" >> /etc/sysconfig/network-scripts/ifcfg-${main_interfac
 echo IPV6_FAILURE_FATAL="no" >> /etc/sysconfig/network-scripts/ifcfg-${main_interface}
 echo IPV6ADDR="\"${IPV6SUBNET}\"" >> /etc/sysconfig/network-scripts/ifcfg-${main_interface}
 echo IPV6_DEFAULTGW="\"${IPV6GATEWAY}\"" >> /etc/sysconfig/network-scripts/ifcfg-${main_interface}
-# echo NM_CONTROLLED="no" >> /etc/sysconfig/network-scripts/ifcfg-${main_interface}
+echo NM_CONTROLLED="no" >> /etc/sysconfig/network-scripts/ifcfg-${main_interface}
 sudo systemctl start NetworkManager.restart
-ifdown ens3
-ifup ens3
+ifup eth0
