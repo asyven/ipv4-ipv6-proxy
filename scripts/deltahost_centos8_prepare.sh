@@ -11,8 +11,8 @@ echo IPV6INIT="yes" >> /etc/sysconfig/network-scripts/ifcfg-ens3
 echo IPV6_AUTOCONF="no" >> /etc/sysconfig/network-scripts/ifcfg-ens3
 echo IPV6_DEFROUTE="yes" >> /etc/sysconfig/network-scripts/ifcfg-ens3
 echo IPV6_FAILURE_FATAL="no" >> /etc/sysconfig/network-scripts/ifcfg-ens3
-echo IPV6ADDR="${IPV6SUBNET}" >> /etc/sysconfig/network-scripts/ifcfg-ens3
-echo IPV6_DEFAULTGW="${IPV6GATEWAY}" >> /etc/sysconfig/network-scripts/ifcfg-ens3
+echo IPV6ADDR="\"${IPV6SUBNET}\"" >> /etc/sysconfig/network-scripts/ifcfg-ens3
+echo IPV6_DEFAULTGW="\"${IPV6GATEWAY}\"" >> /etc/sysconfig/network-scripts/ifcfg-ens3
 # echo NM_CONTROLLED="no" >> /etc/sysconfig/network-scripts/ifcfg-${main_interface}
 sudo systemctl start NetworkManager.restart
 ifdown ens3
