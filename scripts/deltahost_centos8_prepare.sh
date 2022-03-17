@@ -13,3 +13,4 @@ echo IPV6_DEFROUTE="yes" >> /etc/sysconfig/network-scripts/ifcfg-${main_interfac
 echo IPV6_FAILURE_FATAL="no" >> /etc/sysconfig/network-scripts/ifcfg-${main_interface}
 echo IPV6ADDR="${IPV6ADDR}/32" >> /etc/sysconfig/network-scripts/ifcfg-${main_interface}
 echo IPV6_DEFAULTGW="${IPV6GATEWAY}" >> /etc/sysconfig/network-scripts/ifcfg-${main_interface}
+
